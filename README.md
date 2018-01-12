@@ -18,6 +18,21 @@ For local installations and testing, [MAMP Pro](https://www.mamp.info/en/mamp-pr
 The `index.php` file is used as the entry point for the site and all requests (apart from for existing files and folders) are rewritten to it using the `.htaccess` file and Apache's `RewriteRule`.  
 This file runs a small amount of setup, defining global file paths and loading modules, then attempts to load the requested page. If the page does not exist the `pages/404.php` file is loaded instead.
 
+## .htaccess
+
+A .htaccess file is required for this site to run. It should be set to:
+
+    # BEGIN Static Rewrite
+    <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+    </IfModule>
+    # END Static Rewrite
+
 # Sass
 
 Sass is used to compile `.scss` files into browser readable CSS.
