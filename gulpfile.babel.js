@@ -28,7 +28,6 @@ let cwd = process.cwd(),
     notify = require('gulp-notify'),
     rename = require('gulp-rename'),
     rev = require('gulp-rev'),
-    revReplace = require('gulp-rev-replace'),
     sass = require('gulp-ruby-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
@@ -201,7 +200,7 @@ gulp.task( 'images', () => {
  */
 gulp.task( 'server', ( done ) => {
   browserSync.init( {
-    proxy: 'http://local.statictemplate:8888/',
+    proxy: '',
     // Don't mirror clicks, scroll across instances
     ghostMode: false,
     // Don't open straight away (most likely already have 
