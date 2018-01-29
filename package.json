@@ -43,9 +43,9 @@
   "license": "ISC",
   "globs": {
     "styles": {
-      "in": "src/css/sass/*.scss",
+      "in": "src/css/*.scss",
       "out": "dist/css",
-      "watch": "src/css/sass/**/*.scss"
+      "watch": "src/css/**/*.scss"
     },
     "scripts": {
       "in": "src/js",
