@@ -29,6 +29,7 @@
 
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>jQuery.noConflict();</script>
 	<script src="/dist/<?php echo getRevision('js/footer.min.js'); ?>"></script>
 
 </body>
