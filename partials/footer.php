@@ -4,33 +4,41 @@
  * The footer of the site.
  */
 
+global $meta;
+
 ?>
 
-<footer class="footer u-no-spacing" role="contentinfo">
+	<footer class="footer" role="contentinfo">
 
-		<div class="credits row">
-			<div class="inner">
+		<div class="container">
+			<div class="footer__secondary">
 				
-				<div class="credits__left">&copy; Copyright <a href="CLIENTURL" target="_blank">CLIENT</a> <?php echo date('Y'); ?></div>
+				<p>&copy; Copyright <a href="TODO:CLIENT_URL" target="_blank" rel="noopener">TODO:CLIENT_NAME</a> <?php echo date('Y'); ?></p>
 
-				<div class="credits__right">
-					<ul class="hlist">
-						<li>
-							<a href="privacy-policy.php">Privacy Policy</a>
-						</li><li>
-							<a href="CREATOR_URL" target="_blank">Website by CREATOR</a>
-						</li>
-					</ul>
-				</div>
+				<ul class="footer__links">
+					<li>
+						<a href="/privacy-policy/">Privacy Policy</a>
+					</li><li>
+						<a href="TODO:CREATOR_URL" target="_blank" rel="noopener">Website by TODO:CREATOR_NAME</a>
+					</li>
+				</ul>
 
 			</div>
 		</div>
 	</footer>
 
-	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>jQuery.noConflict();</script>
 	<script src="/dist/<?php echo getRevision('js/footer.min.js'); ?>"></script>
+
+	<?php
+		// Conditionally load the Google Maps library and initialiser
+		// The API key used is a shared one across all projects
+	?>
+	<?php if ( false && 'TODO:PAGE_SLUG' == $meta->slug ): ?>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzFKXWKxUhX9JTp5jHRA2drw4rE4VNTUE"></script>
+		<script src="/dist/<?php echo getRevision('js/google-maps.min.js'); ?>"></script>
+	<?php endif; ?>
 
 </body>
 </html>

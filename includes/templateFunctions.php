@@ -39,3 +39,19 @@ function getHeader() {
 function getFooter() {
 	getPartial( 'footer' );
 }
+
+/**
+ * Include an assset file into the main document.
+ * The file will only be included if it exists.
+ * @param  string $file_path The path to the asset, including extenstion.
+ *                           If it is contained in a subfolder this folder name 
+ *                           should be passed as part of this parameter.
+ * @return string
+ */
+function includeAsset( $file_path ) {
+	$file_path = ABS_PATH . $file_path;
+
+	if ( file_exists( $file_path ) && is_readable( $file_path ) ) {
+		include $file_path;
+	}
+}

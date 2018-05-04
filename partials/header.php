@@ -7,30 +7,27 @@
 global $meta;
 
 ?><!DOCTYPE html>
-<!--[if IE 9]>
-<html class="ie ie9 no-js" lang="en-gb">
-<![endif]-->
-<!--[if !(IE 9)]><!-->
 <html class="no-js" lang="en-gb">
-<!--<![endif]-->
 <head>
+	<?php // Don't index certain pages ?>
+	<?php if ( isset( $meta->noindex ) && $meta->noindex ): ?>
+		<meta name="robots" content="noindex">
+	<?php endif; ?>
+
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title><?php echo $meta->title; ?> | SITE_TITLE</title>
+	<title><?php echo $meta->title; ?> | TODO:SITE_TITLE</title>
 	<meta name="description" content="<?php echo $meta->description; ?>">
 
 	<!-- Start Favicons -->
 	
 	<!-- End Favicons -->
 
+	<!-- TypeKit Link Here -->
 	<link rel="stylesheet" type="text/css" href="/dist/<?php echo getRevision('css/style.min.css'); ?>">
 
 	<script type="text/javascript" src="/dist/<?php echo getRevision('js/head.min.js'); ?>"></script>
-
-	<!-- Start TypeKit Kit -->
-	
-	<!-- End TypeKit Kit -->
 
 	<!-- Start Google Analytics -->
 	
@@ -43,9 +40,24 @@ global $meta;
 				
 			<a href="/">
 				<h1 class="logomark">
-					<span class="u-visually-hidden">TITLE</span>
+					<span class="u-visually-hidden">TODO:SITE_TITLE</span>
 				</h1>
 			</a>
+
+			<nav class="navigation" role="navigation">
+				<ul class="menu">
+					<li>
+						<a href="/">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="/contact/">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
 			
 		</div>
 	</header>

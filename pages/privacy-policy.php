@@ -11,12 +11,12 @@ getHeader();
 
 ?>
 
-<main class="content u-no-spacing" role="main">
-	<div class="container">
+<main class="content" role="main">
+	<article class="article">
 	
-		<article class="article">
+		<div class="container">
 			
-			<h2 class="title">Privacy Policy</h2>
+			<h2 class="title title--primary">Privacy Policy</h2>
 			<div class="article__content s-flow-content">
 
 				<p>This Privacy Policy sets out how we use and protect any information that you give us when you use this website.</p>
@@ -42,9 +42,9 @@ getHeader();
 
 			</div>
 				
-		</article>
+		</div>
 
-	</div>
+	</article>
 </main>
 
 <?php getFooter(); ?>

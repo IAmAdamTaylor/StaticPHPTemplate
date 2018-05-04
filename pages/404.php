@@ -11,12 +11,12 @@ getHeader();
 
 ?>
 
-<main class="content u-no-spacing" role="main">
-	<div class="container">
+<main class="content" role="main">
+	<article class="article">
 		
-		<article class="article">
+		<div class="container">
 
-			<h2 class="title title--primary title--regular">404<br>Page Not Found</h2>				
+			<h2 class="title title--primary">404<br>Page Not Found</h2>				
 			<div class="article__content s-flow-content">
 
 				<p>We couldn't find the page you were looking for.</p>
@@ -25,9 +25,9 @@ getHeader();
 
 			</div>
 
-		</article>
+		</div>
 
-	</div>
+	</article>
 </main>
 
 <?php getFooter(); ?>

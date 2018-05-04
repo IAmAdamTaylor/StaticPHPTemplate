@@ -13,14 +13,14 @@ getHeader();
 	
 ?>
 
-<main class="content u-no-spacing" role="main">
-	<div class="container">
+<main class="content" role="main">
+	<article class="article">
 		
-		<article class="article">
+		<div class="container">
 
-		</article>
+		</div>
 
-	</div>
+	</article>
 </main>
 
 <?php getFooter(); ?>

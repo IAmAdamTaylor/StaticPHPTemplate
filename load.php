@@ -21,12 +21,11 @@ function _loadInclude( $file ) {
 }
 
 _loadInclude( 'class-PageMeta' );
+_loadInclude( 'templateFunctions' );
 
 // Load a global instance of the meta class
 global $meta;
 $meta = new PageMeta();
-
-_loadInclude( 'templateFunctions' );
 
 /**
  * Get the revised file name from the revisions manifest.

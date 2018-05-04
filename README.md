@@ -20,8 +20,17 @@ This file runs a small amount of setup, defining global file paths and loading m
 
 ## .htaccess
 
-A .htaccess file is required for this site to run. It should be set to:
+A .htaccess file is required for this site to run. It should include the following lines:
 
+    # BEGIN Redirect to trailing slashs
+    <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+    </IfModule>
+    # END Redirect to trailing slashs 
+     
     # BEGIN Static Rewrite
     <IfModule mod_rewrite.c>
     RewriteEngine On
